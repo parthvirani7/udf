@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>awaping</title>
+  </head>
+  <body>
+    Enter Number A <input type="number" id="n1" /> Enter Number B
+    <input type="number" id="n2" />
+    <input type="submit" onclick="math()" />
+    <h1 id="print"></h1>
+    <h1 id="print1"></h1>
+
+    <script>
+      function math() {
+        var a = parseInt(document.getElementById("n1").value);
+        var b = parseInt(document.getElementById("n2").value);
+
+        b = a + b; //30=10+20
+        a = b - a; //20=30-10
+        b = b - a; //10=30-20
+        document.getElementById("print").innerHTML = "A = " + a;
+        document.getElementById("print1").innerHTML = "B = " + b;
+      }
+    </script>
+  </body>
+</html>

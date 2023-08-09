@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 3. Write a JavaScript program to find which number is greter in 3 numbers using nested if else. (using simple function) -->
+
+    <center>
+      <h1>program to check number positive and negetive?</h1>
+
+      Enter Value A : <input type="number" id="a" /> <br />
+      Enter Value B : <input type="number" id="b" /> <br />
+      Enter Value C : <input type="number" id="c" /> <br />
+
+      <br />
+
+      <input type="submit" onclick="math()" />
+
+      <h3 id="output"></h3>
+
+      <script>
+        function math() {
+          var a = parseInt(document.getElementById("a").value);
+          var b = parseInt(document.getElementById("b").value);
+          var c = parseInt(document.getElementById("c").value);
+          if (a > b) {
+            document.getElementById("output").innerHTML = '"A" is big';
+          } else {
+            if (a > c) {
+              document.getElementById("output").innerHTML = '"A" is big';
+            } else {
+              document.getElementById("output").innerHTML = '"C" is big';
+            } 
+            if (b > c) {
+              document.getElementById("output").innerHTML = '"B" is big';
+            } else {
+              document.getElementById("output").innerHTML = '"C" is big';
+            }
+          }
+        }
+      </script>
+    </center>
+  </body>
+</html>

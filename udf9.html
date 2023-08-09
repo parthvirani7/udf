@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1>Voting Eligable</h1>
+      <b>Enter Your Age</b> <br /><br />
+      <input type="number" id="a" /> <br />
+      <br />
+
+      <input type="submit" onclick="math()" />
+
+      <h2 id="ans"></h2>
+      <h3 id="l"></h3>
+      <script>
+        function math() {
+          var a = parseInt(document.getElementById("a").value);
+          var l = 18 - a;
+
+          if (a >= 18) {
+            document.getElementById("ans").innerHTML = "Congrets You can vote";
+          } else {
+            document.getElementById("ans").innerHTML =
+              "Sorry!! You Are not Eligable for vote";
+            document.getElementById("l").innerHTML =
+              "Come after " + l + " years";
+          }
+        }
+      </script>
+    </center>
+  </body>
+</html>

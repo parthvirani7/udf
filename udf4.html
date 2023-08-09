@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UDF (User Defined Function)-4</title>
+  </head>
+
+  <body>
+    ENTER VALUE A : <input type="number" id="a" /> <br /><br />
+    ENTER VALUE b : <input type="number" id="b" /> <br /><br />
+    ENTER VALUE C : <input type="number" id="c" /> <br /><br />
+    ENTER VALUE D : <input type="number" id="d" /> <br /><br />
+    <input type="submit" onclick="checkNumber()" />
+
+    <h1 id="ok"></h1>
+
+    <script type="text/javascript">
+      function checkNumber() {
+        var a = parseInt(document.getElementById("a").value);
+        var b = parseInt(document.getElementById("b").value);
+        var c = parseInt(document.getElementById("c").value);
+        var d = parseInt(document.getElementById("d").value);
+
+        if (a > b && a > c && a > d) {
+          document.getElementById("ok").innerHTML = a + " is greater.";
+        } else if (b > a && b > c && b > d) {
+          document.getElementById("ok").innerHTML = b + " is greater.";
+        } else if (c > a && c > b && c > d) {
+          document.getElementById("ok").innerHTML = c + " is greater.";
+        } else if (d > a && d > b && d > c) {
+          document.getElementById("ok").innerHTML = d + " is greater.";
+        } else {
+          document.getElementById("ok").innerHTML =
+            "You entered equal numbers.";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--  -->
+
+    <center>
+      <h1></h1>
+
+      Enter Value A corner : <input type="number" id="a" /> <br />
+      Enter Value B corner : <input type="number" id="b" /> <br />
+      Enter Value C corner : <input type="number" id="c" /> <br />
+
+      <br />
+
+      <input type="submit" onclick="math()" />
+
+      <h3 id="output"></h3>
+
+      <script>
+        function math() {
+          var a = parseInt(document.getElementById("a").value);
+          var b = parseInt(document.getElementById("b").value);
+          var c = parseInt(document.getElementById("c").value);
+          var total = a + b + c;
+          if (total == 180) {
+            document.getElementById("output").innerHTML = "it is triangle";
+          } else {
+            document.getElementById("output").innerHTML = "it is not triangle";
+          }
+        }
+      </script>
+    </center>
+  </body>
+</html>
